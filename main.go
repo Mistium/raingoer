@@ -1,15 +1,15 @@
 package main
 
 import (
-	"os"
-	"fmt"
-	"strings"
-	"github.com/mistium/raingoer/tokens"
-	"github.com/mistium/raingoer/runner"
+    "fmt"
+    "os"
+    "github.com/mistium/raingoer/runner"
+    "github.com/mistium/raingoer/tokens"
 )
 
 func parseMain(block string) []string {
 	var lines = tokens.Tokenise(block, '\n')
+	return lines
 }
 
 func main() {
@@ -19,12 +19,12 @@ func main() {
         panic(err)
     }
 
-    var code = fmt.Sprintf("%s\n", fi)
-	var lines = tokenise(code, '\n')
-	
+    var code = string(fi)
+	var lines = tokens.Tokenise(code, '\n')
+
 	for i, line := range lines {
 		var split_line = tokens.Tokenise(line, ' ')
-		if len(split_line) == 0 { continue }
+		if len(split_line) == 0 || strings.TrimSpace(split_line[0]) == "" { continue }
 		runner.Run(split_line[0], split_line[1:]...)
 	}
 }

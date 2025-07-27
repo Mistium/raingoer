@@ -1,6 +1,6 @@
 package runner
 
-func run(command string, args ...string) {
+func Run(command string, args ...string) {
 	switch command {
 	case "/state":
 		fmt.Println(args)

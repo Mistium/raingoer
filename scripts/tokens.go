@@ -1,6 +1,6 @@
 package tokens
 
-func tokenise(code string, delimiter byte) []string {
+func Tokenise(code string, delimiter byte) []string {
 	var (
 		out     []byte
 		split   []string
