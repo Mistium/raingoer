@@ -1,0 +1,6 @@
+set counter to 0
+while counter < 5
+    state counter
+    set counter to counter + 1
+end
+state "While loop finished!"

@@ -1,0 +1,25 @@
+func test_arrays
+  set arr to {1, 2, 3, 4, 5}
+  state arr
+  return arr
+end
+
+func test_objects
+  set obj to {name: "Alice", age: 30, city: "New York"}
+  state obj
+  return obj
+end
+
+func mixed_example
+  set data to {
+    numbers: {1, 2, 3},
+    person: {name: "Bob", age: 25},
+    active: 1
+  }
+  state data
+  return data
+end
+
+state [test_arrays]
+state [test_objects]
+state [mixed_example]

@@ -1,0 +1,33 @@
+// Comprehensive test of while loops and switch cases
+set counter to 1
+state "Testing while loop with switch case inside:"
+
+while counter <= 3
+    state "Iteration: " ++ counter
+    
+    switch counter
+    case 1
+        state "  First iteration"
+    case 2
+        state "  Second iteration"
+    case 3
+        state "  Third iteration"
+    default
+        state "  Unknown iteration"
+    end
+    
+    set counter to counter + 1
+end
+
+state "Testing switch with default case:"
+set test_value to 99
+switch test_value
+case 1, 2, 3
+    state "Small number"
+case 10, 20, 30
+    state "Round number"
+default
+    state "Other value: " ++ test_value
+end
+
+state "All tests completed!"

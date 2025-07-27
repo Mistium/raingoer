@@ -1,0 +1,15 @@
+func fib v
+  set a to 0
+  set b to 1
+  set c to 0
+  loop v
+    set c to a + b
+    set a to b
+    set b to c
+  end
+  return c
+end
+
+loop 1000
+    fib 1000
+end

@@ -1,0 +1,25 @@
+set grade to "A"
+switch grade
+case "A"
+    state "Excellent!"
+case "B"
+    state "Good job!"
+case "C"
+    state "Average"
+case "D", "F"
+    state "Needs improvement"
+default
+    state "Invalid grade"
+end
+
+set number to 2
+switch number
+case 1
+    state "One"
+case 2
+    state "Two"
+case 3
+    state "Three"
+default
+    state "Other number"
+end

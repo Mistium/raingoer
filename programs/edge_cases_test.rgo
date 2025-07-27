@@ -1,0 +1,27 @@
+// Edge case tests
+state "Testing infinite loop prevention:"
+set safety to 0
+while safety < 3
+    state "Safety iteration: " ++ safety
+    set safety to safety + 1
+end
+
+state "Testing empty switch:"
+set empty_val to 42
+switch empty_val
+default
+    state "Default case executed for: " ++ empty_val
+end
+
+state "Testing boolean values in switch:"
+set is_true to true
+switch is_true
+case true
+    state "Boolean true matched"
+case false
+    state "Boolean false matched"
+default
+    state "Boolean default"
+end
+
+state "Edge case tests completed!"
